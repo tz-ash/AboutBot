@@ -17,7 +17,7 @@ async def _(event):
     await aboutbot.send_message(event.chat_id, f"**Hey {name}, I am {botname}.\n\nI am assistant of {uname}\n\nYou can check his info through me.😊**", 
                                 buttons=[
                                     [Button.inline("Help:💬", data="help")],
-                                    [Button.url("Deploy Your Own Bot🤩", url="https://heroku.com/deploy?template=https://github.com/anonyindian/aboutbot")]
+                                    [Button.url("psykid 👽", url="https://t.me/psykd")]
                                 ])
     
 @aboutbot.on(events.callbackquery.CallbackQuery(data="help"))
