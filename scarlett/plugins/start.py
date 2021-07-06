@@ -16,8 +16,8 @@ async def _(event):
     botname = Config.BOT_NAME
     await aboutbot.send_message(event.chat_id, f"**Hey {name}, I am {botname}.\n\nI am assistant of {uname}\n\nYou can check his info through me.😊**", 
                                 buttons=[
-                                    [Button.inline("About Kid 😈", data="help")],
-                                    [Button.url("psykid 👽", url="https://t.me/psykd")]
+                                    [Button.inline("Kid 😈", data="help")],
+                                    [Button.url("Psy World 👽", url="https://t.me/psykd")]
                                 ])
     
 @aboutbot.on(events.callbackquery.CallbackQuery(data="help"))
@@ -27,28 +27,28 @@ async def _(event):
     if Config.BOT_SECTION == "None" and Config.FED_SECTION == "None":
         await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.",
                         buttons=[
-                            [Button.inline("About", data="about"), Button.inline("Channels & Groups", data="grups")],
-                            [Button.inline("Communities", data="coms")]
+                            [Button.inline("About 🦋", data="about"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("Communities 🍄", data="coms")]
                         ])
     elif Config.BOT_SECTION == "None":
         await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.", 
                         buttons=[
-                            [Button.inline("About", data="about"), Button.inline("Channels & Groups", data="grups")],
-                            [Button.inline("Communities", data="coms"), Button.inline("Fed", data="fed")]
+                            [Button.inline("About 🦋", data="about"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("Communities 🍄", data="coms"), Button.inline("Fed 🍄", data="fed")]
                         ])
         
     elif Config.FED_SECTION == "None":
          await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.", 
                         buttons=[
-                            [Button.inline("About", data="about"), Button.inline("Channels & Groups", data="grups")],
-                            [Button.inline("Communities", data="coms"), Button.inline("Bots", data="bots")]
+                            [Button.inline("About 🦋", data="about"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("Communities 🍄", data="coms"), Button.inline("Bots 🍁", data="bots")]
                         ])
     
     else:
          await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.", 
                         buttons=[
-                            [Button.inline("About", data="about"), Button.inline("Bots", data="bots"), Button.inline("Channels & Groups", data="grups")],
-                            [Button.inline("Communities", data="coms"), Button.inline("Fed", data="fed")]
+                            [Button.inline("About 🦋", data="about"), Button.inline("Bots 🍁", data="bots"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("Communities 🍄", data="coms"), Button.inline("Fed 🍄", data="fed")]
                         ])
 
 @aboutbot.on(events.callbackquery.CallbackQuery(data="about"))
@@ -56,7 +56,7 @@ async def _(event):
     abttxt = Config.ABOUT_SECTION
     await event.edit(f"{abttxt}", 
                         buttons=[
-                            [Button.inline("Return", data="help")]
+                            [Button.inline("Return 😜", data="help")]
                         ])
 
 @aboutbot.on(events.callbackquery.CallbackQuery(data="bots"))
@@ -64,7 +64,7 @@ async def _(event):
     bottxt = Config.BOT_SECTION
     await event.edit(f"{bottxt}", 
                         buttons=[
-                            [Button.inline("Return", data="help")]
+                            [Button.inline("Return 😜", data="help")]
                         ])
 
 @aboutbot.on(events.callbackquery.CallbackQuery(data="grups"))
@@ -72,7 +72,7 @@ async def _(event):
     ownergrups = Config.OWNERSHIPS
     await event.edit(f"{ownergrups}", 
                         buttons=[
-                            [Button.inline("Return", data="help")]
+                            [Button.inline("Return 😜", data="help")]
                         ])
 
 @aboutbot.on(events.callbackquery.CallbackQuery(data="coms"))
@@ -80,7 +80,7 @@ async def _(event):
     coms = Config.COM_SECTION
     await event.edit(f"{coms}", 
                         buttons=[
-                            [Button.inline("Return", data="help")]
+                            [Button.inline("Return 😜", data="help")]
                         ])
   
 @aboutbot.on(events.callbackquery.CallbackQuery(data="fed"))
@@ -88,5 +88,5 @@ async def _(event):
     feds = Config.FED_SECTION
     await event.edit(f"{feds}", 
                         buttons=[
-                            [Button.inline("Return", data="help")]
+                            [Button.inline("Return 😜", data="help")]
                         ])
