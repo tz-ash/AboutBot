@@ -16,7 +16,7 @@ async def _(event):
     botname = Config.BOT_NAME
     await aboutbot.send_message(event.chat_id, f"**Hey {name}, I am {botname}.\n\nI am assistant of {uname}\n\nYou can check his info through me.😊**", 
                                 buttons=[
-                                    [Button.inline("Help:💬", data="help")],
+                                    [Button.inline("About Kid 😈", data="help")],
                                     [Button.url("psykid 👽", url="https://t.me/psykd")]
                                 ])
     
