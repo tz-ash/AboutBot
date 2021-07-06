@@ -27,27 +27,27 @@ async def _(event):
     if Config.BOT_SECTION == "None" and Config.FED_SECTION == "None":
         await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.",
                         buttons=[
-                            [Button.inline("About 🦋", data="about"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("About 🦋", data="about"), Button.inline("Kidz World 🦋", data="grups")],
                             [Button.inline("Communities 🍄", data="coms")]
                         ])
     elif Config.BOT_SECTION == "None":
         await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.", 
                         buttons=[
-                            [Button.inline("About 🦋", data="about"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("About 🦋", data="about"), Button.inline("Kidz World 🦋", data="grups")],
                             [Button.inline("Communities 🍄", data="coms"), Button.inline("Fed 🍄", data="fed")]
                         ])
         
     elif Config.FED_SECTION == "None":
          await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.", 
                         buttons=[
-                            [Button.inline("About 🦋", data="about"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("About 🦋", data="about"), Button.inline("Kidz World 🦋", data="grups")],
                             [Button.inline("Communities 🍄", data="coms"), Button.inline("Bots 🍁", data="bots")]
                         ])
     
     else:
          await event.edit(f"**Hello there, \nMy name is {botname}.\nI am {uname}'s assistant.**\n\nClick below buttons to find specific info about my master.", 
                         buttons=[
-                            [Button.inline("About 🦋", data="about"), Button.inline("Bots 🍁", data="bots"), Button.inline("Channels 🦋 Groups", data="grups")],
+                            [Button.inline("About 🦋", data="about"), Button.inline("Bots 🍁", data="bots"), Button.inline("Kidz World 🦋", data="grups")],
                             [Button.inline("Communities 🍄", data="coms"), Button.inline("Fed 🍄", data="fed")]
                         ])
 
